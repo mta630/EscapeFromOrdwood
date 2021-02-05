@@ -1,0 +1,13 @@
+C:\Users\michael.albert\OneDrive - InTimeTec Visionsoft Pvt. Ltd.,\Documents\Programming\Learning Plan\Escape from Ordwood\src\EscapeFromOrdwood\bin\Debug\netcoreapp3.1\EscapeFromOrdwood.exe
+C:\Users\michael.albert\OneDrive - InTimeTec Visionsoft Pvt. Ltd.,\Documents\Programming\Learning Plan\Escape from Ordwood\src\EscapeFromOrdwood\bin\Debug\netcoreapp3.1\EscapeFromOrdwood.deps.json
+C:\Users\michael.albert\OneDrive - InTimeTec Visionsoft Pvt. Ltd.,\Documents\Programming\Learning Plan\Escape from Ordwood\src\EscapeFromOrdwood\bin\Debug\netcoreapp3.1\EscapeFromOrdwood.runtimeconfig.json
+C:\Users\michael.albert\OneDrive - InTimeTec Visionsoft Pvt. Ltd.,\Documents\Programming\Learning Plan\Escape from Ordwood\src\EscapeFromOrdwood\bin\Debug\netcoreapp3.1\EscapeFromOrdwood.runtimeconfig.dev.json
+C:\Users\michael.albert\OneDrive - InTimeTec Visionsoft Pvt. Ltd.,\Documents\Programming\Learning Plan\Escape from Ordwood\src\EscapeFromOrdwood\bin\Debug\netcoreapp3.1\EscapeFromOrdwood.dll
+C:\Users\michael.albert\OneDrive - InTimeTec Visionsoft Pvt. Ltd.,\Documents\Programming\Learning Plan\Escape from Ordwood\src\EscapeFromOrdwood\bin\Debug\netcoreapp3.1\EscapeFromOrdwood.pdb
+C:\Users\michael.albert\OneDrive - InTimeTec Visionsoft Pvt. Ltd.,\Documents\Programming\Learning Plan\Escape from Ordwood\src\EscapeFromOrdwood\obj\Debug\netcoreapp3.1\EscapeFromOrdwood.csprojAssemblyReference.cache
+C:\Users\michael.albert\OneDrive - InTimeTec Visionsoft Pvt. Ltd.,\Documents\Programming\Learning Plan\Escape from Ordwood\src\EscapeFromOrdwood\obj\Debug\netcoreapp3.1\EscapeFromOrdwood.AssemblyInfoInputs.cache
+C:\Users\michael.albert\OneDrive - InTimeTec Visionsoft Pvt. Ltd.,\Documents\Programming\Learning Plan\Escape from Ordwood\src\EscapeFromOrdwood\obj\Debug\netcoreapp3.1\EscapeFromOrdwood.AssemblyInfo.cs
+C:\Users\michael.albert\OneDrive - InTimeTec Visionsoft Pvt. Ltd.,\Documents\Programming\Learning Plan\Escape from Ordwood\src\EscapeFromOrdwood\obj\Debug\netcoreapp3.1\EscapeFromOrdwood.csproj.CoreCompileInputs.cache
+C:\Users\michael.albert\OneDrive - InTimeTec Visionsoft Pvt. Ltd.,\Documents\Programming\Learning Plan\Escape from Ordwood\src\EscapeFromOrdwood\obj\Debug\netcoreapp3.1\EscapeFromOrdwood.dll
+C:\Users\michael.albert\OneDrive - InTimeTec Visionsoft Pvt. Ltd.,\Documents\Programming\Learning Plan\Escape from Ordwood\src\EscapeFromOrdwood\obj\Debug\netcoreapp3.1\EscapeFromOrdwood.pdb
+C:\Users\michael.albert\OneDrive - InTimeTec Visionsoft Pvt. Ltd.,\Documents\Programming\Learning Plan\Escape from Ordwood\src\EscapeFromOrdwood\obj\Debug\netcoreapp3.1\EscapeFromOrdwood.genruntimeconfig.cache
