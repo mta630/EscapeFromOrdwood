@@ -19,14 +19,14 @@ namespace Project.EscapeFromOrdwood
             #region Rooms
             Room dungeon = new Room("The Dungeon", "You sit in a cold damp cell, it is very dimly lit and you can hear an ocean of whispers and screams that has become a part of your madness, you must escape this place. The only exit is the door to your cell which has a small lock.\nYou notice a small hairpin wedged into the wall, you see the words \"Death is L\" scribbled beside it.", "You sit in a cold damp cell, it is very dimly lit and you can hear an ocean of whispers and screams that has become a part of your madness, you must escape this place. The only exit is the door to your cell which has a small lock.");
             Room smallHallway = new Room("A Small Hallway", "", "A thin hallway that seems to get smaller the further you walk, this isnt the time to get claustrophobic. You can barely make out 2 doors in the darkness, one to the west and one to the south");
-            Room crypt = new Room("The Crypt", "", "Unlike the flagstone common throughout the dungeon, this room is walled and floored with black marble veined with white. The ceiling is similarly marbled, but the thick pillars that hold it up are white.\nA brown stain drips down one side of a nearby pillar. It wreaks of death in here but the organization of the tombs is actually something to behold.\n You notice the door you unlocked to the north as well as a door to the east.");
-            Room puzzleRoomOne = new Room("A Puzzle Room", "Unlike the flagstone common throughout the dungeon, this room is walled and floored with black marble veined with white. The ceiling is similarly marbled, but the thick pillars that hold it up are white.\nA brown stain drips down one side of a nearby pillar. In the corner of the room you see a slender and small lizard type creature whispering to himself clutching something that gives off a yellow glow, when he realizes you are there he snaps his upperbody towards you and begins \n \"H-h-hello warmblood, you wantsss my shiny? You must s-s-sssolve my riddle first\"", "Unlike the flagstone common throughout the dungeon, this room is walled and floored with black marble veined with white. The ceiling is similarly marbled, but the thick pillars that hold it up are white.\n A brown stain drips down one side of a nearby pillar.");
-            Room bedChamber = new Room("The BedChamber", "", "You open the door, and the room comes alive with light and music. A sourceless, warm glow suffuses the chamber, and a harp you cannot see plays soothing sounds. Unfortunately, the rest of the chamber isn't so inviting.\nThe floor is strewn with the smashed remains of rotting furniture. It looks like the room once held a bed, a desk, a chest, and a chair.");
+            Room crypt = new Room("The Crypt", "", $"A glow escapes this room through its open doorways. The masonry between every stone emanates an unnatural yellow radiance. Glancing quickly about the room, you note that each stone bears the carving of someone's name.\nYou notice the door you unlocked to the north as well as a large glowing door to the east");
+            Room puzzleRoomOne = new Room("A Puzzle Room", "Unlike the flagstone common throughout the dungeon, this room is walled and floored with black marble veined with white. The ceiling is similarly marbled, but the thick pillars that hold it up are white.\nA brown stain drips down one side of a nearby pillar. In the corner of the room you see a slender and small lizard type creature whispering to himself clutching something that gives off a yellow glow, when he realizes you are there he snaps his upperbody towards you and begins \n\n\"H-h-hello warmblood, you wantsss the shiny? You must s-s-sssolve my riddle first\"", "Unlike the flagstone common throughout the dungeon, this room is walled and floored with black marble veined with white. The ceiling is similarly marbled, but the thick pillars that hold it up are white.\nA brown stain drips down one side of a nearby pillar.");
+            Room bedChamber = new Room("The BedChamber", "", "As you enter, the room comes alive with light and music. A sourceless, warm glow suffuses the chamber, and a harp you cannot see plays soothing sounds. Unfortunately, the rest of the chamber isn't so inviting.\nThe floor is strewn with the smashed remains of rotting furniture. It looks like the room once held a bed, a desk, a chest, and a chair. You notice a menacing door to the east that appears to be covered in blood, and a seemingly normal door to the north.");
             #endregion
 
             #region Items
             Item hairpin = new Item("Hairpin", "A small metal hairpin that could be fashioned into a lockpick", dungeon, smallHallway, "You bend the metal in a way and tinker with the lock for sometime before you hear a click, you quickly bolt out of your cell. You see hundreds of gaunt faces watching you from other cells as you sprint towards the stairs leading up. You grab the handle to the door out of the dungeon and luckily it is unlocked, you open the door and step through.");
-            Item yellowKey = new Item("Yellow Key", "A large key that gives off a nearly blinding yellow glow", crypt, bedChamber, "You start to move the shining yellow key towards the door. The key starts to become hotter and hotter as you move it towards the door, there is a flash of light that temporarily blinds you. When your vision returns you notice that the door has completely dissapeared leaving just a moldy doorway. As you step through the doorway the wall seems to come alive and closes the doorway in stone behind you, as if there never was a door.");
+            Item yellowKey = new Item("Yellow-Key", "A large key that gives off a nearly blinding yellow glow", crypt, bedChamber, "You start to move the shining yellow key towards the door. The key starts to become hotter and hotter as you move it towards the door, there is a flash of light that temporarily blinds you.\nWhen your vision returns you notice that the door has completely dissapeared leaving just a moldy doorway.\nAs you step through the doorway the wall seems to come alive and closes the doorway in stone behind you, as if there never was a door.");
             #endregion
 
             #region Add Items to Rooms
@@ -37,10 +37,11 @@ namespace Project.EscapeFromOrdwood
             smallHallway.Exits.Add("west", puzzleRoomOne);
             smallHallway.Exits.Add("south", crypt);
             puzzleRoomOne.Exits.Add("east", smallHallway);
+            crypt.Exits.Add("north", smallHallway);
             #endregion
             
             #region Riddles
-            Riddle riddleOne = new Riddle("Feed me and I will live, give me a drink and I will die.", "What is not alive but grows, does not breaths but needs air.", "fire", "As soon as you finish uttering the words, the strange lizard morphs into a common lizard and scurries away, a glowing yellow key falls onto the ground and you add it to your inventory", yellowKey, false);
+            Riddle riddleOne = new Riddle("\"Feed me and I will live, give me a drink and I will die.\"", "\"What is not alive but grows, does not breaths but needs air.\"", "fire", "As soon as you finish uttering the words, the strange lizard morphs into a common lizard and scurries away, a glowing yellow key falls onto the ground and you add it to your inventory", yellowKey, false);
             #endregion
 
             #region Adding Riddles to Rooms
@@ -298,6 +299,9 @@ namespace Project.EscapeFromOrdwood
         {
             bool isSolved = false;
             bool firstClue = true;
+            Console.WriteLine("Press any key to continue");
+            Console.ReadKey();
+            Console.Clear();
 
             while (!isSolved)
             {   
@@ -321,6 +325,7 @@ namespace Project.EscapeFromOrdwood
                 else if (input.ToLower() == "clue")
                 {
                     firstClue = !firstClue;
+                    Console.Clear();
                 }
                 else
                 {
