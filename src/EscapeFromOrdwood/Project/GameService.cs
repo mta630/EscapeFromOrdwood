@@ -14,12 +14,14 @@ namespace Project.EscapeFromOrdwood
         //Initializes the game, creates rooms, their exits, and add items to rooms
         public void Setup()
         {
+            
+
             #region Rooms
-            Room dungeon = new Room("The Dungeon", "You sit in a cold damp cell, it is very dimly lit and you can hear an ocean of whispers and screams that has become a part of your madness, you must escape this place. The only exit is the door to your cell which has a small lock.\n You notice a small hairpin wedged into the wall, you see the words \"Death is L\" scribbled beside it.", "You sit in a cold damp cell, it is very dimly lit and you can hear an ocean of whispers and screams that has become a part of your madness, you must escape this place. The only exit is the door to your cell which has a small lock.");
+            Room dungeon = new Room("The Dungeon", "You sit in a cold damp cell, it is very dimly lit and you can hear an ocean of whispers and screams that has become a part of your madness, you must escape this place. The only exit is the door to your cell which has a small lock.\nYou notice a small hairpin wedged into the wall, you see the words \"Death is L\" scribbled beside it.", "You sit in a cold damp cell, it is very dimly lit and you can hear an ocean of whispers and screams that has become a part of your madness, you must escape this place. The only exit is the door to your cell which has a small lock.");
             Room smallHallway = new Room("A Small Hallway", "", "There will be a description here of the first hallway with one exit to the south and one to the west");
-            Room crypt = new Room("The Crypt", "", "Unlike the flagstone common throughout the dungeon, this room is walled and floored with black marble veined with white. The ceiling is similarly marbled, but the thick pillars that hold it up are white.\n A brown stain drips down one side of a nearby pillar. It wreaks of death in here but the organization of the tombs is actually something to behold.\n You notice the door you unlocked to the north as well as a door to the east.");
-            Room puzzleRoomOne = new Room("A Puzzle Room", "Unlike the flagstone common throughout the dungeon, this room is walled and floored with black marble veined with white. The ceiling is similarly marbled, but the thick pillars that hold it up are white.\n A brown stain drips down one side of a nearby pillar. In the corner of the room you see a slender and small lizard type creature whispering to himself clutching something that gives off a yellow glow, when he realizes you are there he snaps his upperbody towards you and begins \n \"H-h-hello warmblood, you wantsss my shiny? You must s-s-sssolve my riddle first\"", "Unlike the flagstone common throughout the dungeon, this room is walled and floored with black marble veined with white. The ceiling is similarly marbled, but the thick pillars that hold it up are white.\n A brown stain drips down one side of a nearby pillar.");
-            Room bedChamber = new Room("The BedChamber", "", "You open the door, and the room comes alive with light and music. A sourceless, warm glow suffuses the chamber, and a harp you cannot see plays soothing sounds. Unfortunately, the rest of the chamber isn't so inviting.\n The floor is strewn with the smashed remains of rotting furniture. It looks like the room once held a bed, a desk, a chest, and a chair.");
+            Room crypt = new Room("The Crypt", "", "Unlike the flagstone common throughout the dungeon, this room is walled and floored with black marble veined with white. The ceiling is similarly marbled, but the thick pillars that hold it up are white.\nA brown stain drips down one side of a nearby pillar. It wreaks of death in here but the organization of the tombs is actually something to behold.\n You notice the door you unlocked to the north as well as a door to the east.");
+            Room puzzleRoomOne = new Room("A Puzzle Room", "Unlike the flagstone common throughout the dungeon, this room is walled and floored with black marble veined with white. The ceiling is similarly marbled, but the thick pillars that hold it up are white.\nA brown stain drips down one side of a nearby pillar. In the corner of the room you see a slender and small lizard type creature whispering to himself clutching something that gives off a yellow glow, when he realizes you are there he snaps his upperbody towards you and begins \n \"H-h-hello warmblood, you wantsss my shiny? You must s-s-sssolve my riddle first\"", "Unlike the flagstone common throughout the dungeon, this room is walled and floored with black marble veined with white. The ceiling is similarly marbled, but the thick pillars that hold it up are white.\n A brown stain drips down one side of a nearby pillar.");
+            Room bedChamber = new Room("The BedChamber", "", "You open the door, and the room comes alive with light and music. A sourceless, warm glow suffuses the chamber, and a harp you cannot see plays soothing sounds. Unfortunately, the rest of the chamber isn't so inviting.\nThe floor is strewn with the smashed remains of rotting furniture. It looks like the room once held a bed, a desk, a chest, and a chair.");
             #endregion
 
             #region Items
@@ -33,10 +35,16 @@ namespace Project.EscapeFromOrdwood
 
             #region Room Exits
             smallHallway.Exits.Add("west", puzzleRoomOne);
+            smallHallway.Exits.Add("south", crypt);
+            puzzleRoomOne.Exits.Add("east", smallHallway);
             #endregion
-
+            
             #region Riddles
             Riddle riddleOne = new Riddle("Feed me and I will live, give me a drink and I will die.", "What is not alive but grows, does not breaths but needs air.", "fire", "As soon as you finish uttering the words, the strange lizard morphs into a common lizard and scurries away, a glowing yellow key falls onto the ground and you add it to your inventory", yellowKey, false);
+            #endregion
+
+            #region Adding Riddles to Rooms
+            puzzleRoomOne.Riddle = riddleOne;
             #endregion
 
             CurrentRoom = dungeon;
@@ -62,23 +70,24 @@ namespace Project.EscapeFromOrdwood
             Console.WriteLine(@"|___/__|__|\__,_| .__/\___|   |_| |_| \___/_|_|_|   \___/|_| \__,_| \_/\_/\___/\___/\__,_|  ");
             Console.WriteLine(@"                |_|                                                                         ");
             Console.WriteLine();
-            Console.Beep(440, 400);
-            Console.Beep(350, 400);
-            Console.Beep(300, 400);
-            Console.Beep(440, 400);
-            Console.Beep(440, 400);
-            Console.Beep(350, 400);
-            Console.Beep(300, 400);
-            Console.Beep(440, 400);
-            Console.Beep(440, 400);
-            Console.Beep(450, 400);
-            Console.Beep(550, 400);
+            // Console.Beep(440, 400);
+            // Console.Beep(350, 400);
+            // Console.Beep(300, 400);
+            // Console.Beep(440, 400);
+            // Console.Beep(440, 400);
+            // Console.Beep(350, 400);
+            // Console.Beep(300, 400);
+            // Console.Beep(440, 400);
+            // Console.Beep(440, 400);
+            // Console.Beep(450, 400);
+            // Console.Beep(550, 400);
             Console.WriteLine("Welcome to the darkest and most unforgiving place in all of Calridia, the Dungeon of Orwood");
             Thread.Sleep(3000);
             Console.Clear();
             Console.WriteLine("What shall I call you?");
             string input = Console.ReadLine();
             CurrentPlayer = new Player(input);
+            Console.Clear();
             Console.WriteLine($"Hello {CurrentPlayer.PlayerName} and I wish you the best of luck");
             Console.WriteLine();
             Help();
@@ -91,7 +100,7 @@ namespace Project.EscapeFromOrdwood
             while (running)
             {   
 
-                CurrentRoom.Print(CurrentRoom.Items.Count == 0, CurrentRoom.Riddle.IsCompleted);
+                Look();
                 Console.WriteLine();
                 Console.WriteLine("What do you do? ");
                 var input = Console.ReadLine().ToLower();
@@ -123,6 +132,9 @@ namespace Project.EscapeFromOrdwood
                     case "use" :
                         UseItem(option);
                         break;
+                    case "look" :
+                        Look();
+                        break;
                     default :
                         Console.WriteLine("You did not enter a valid command (please check your spelling)");
                         Thread.Sleep(2000);
@@ -139,16 +151,13 @@ namespace Project.EscapeFromOrdwood
         {
             Console.Clear();
             Console.WriteLine("Are you sure you would like to quit? (y/n)");
-            var input = Console.ReadLine();
+            var input = Console.ReadLine().ToLower();
             if (input == "y")
             {
                 running = false;
                 Environment.Exit(0);
             }
-            else if (input == "n")
-            {
-                GetUserInput();
-            } else
+            else if (input != "y" && input != "n") 
             {
                 Console.WriteLine("Invalid entry, please enter either y or n");
                 Quit();
@@ -178,18 +187,16 @@ namespace Project.EscapeFromOrdwood
         {
             if (CurrentRoom.Exits.ContainsKey(direction))
             {
-                Console.WriteLine($"You are able to safely make it through the door and into the {CurrentRoom.Exits[direction].Name}");
+                Console.WriteLine($"You are able to safely make it through the door and into {CurrentRoom.Exits[direction].Name}");
                 CurrentRoom = (Room)CurrentRoom.Exits[direction];
                 Console.WriteLine("Press any Key to Continue");
                 Console.ReadKey();
-                GetUserInput();
             }
             else
             {
                 Console.WriteLine($"You were unable to find a way out of {CurrentRoom.Name} in this direction");
                 Console.WriteLine("Press any Key to Continue");
                 Console.ReadKey();
-                GetUserInput();
             }
         }
 
@@ -269,7 +276,22 @@ namespace Project.EscapeFromOrdwood
         //Display the CurrentRoom Description, Exits, and Items
         public void Look()
         {
-            
+                bool isRiddleSolved = true;
+
+                if (CurrentRoom.Riddle != null)
+                {
+                    isRiddleSolved = CurrentRoom.Riddle.IsCompleted;
+                }
+
+                CurrentRoom.Print(CurrentRoom.Items.Count == 0, isRiddleSolved);
+                if (CurrentRoom.Riddle != null)
+                {
+                    if (!CurrentRoom.Riddle.IsCompleted)
+                    {   
+                        Riddles();
+                    }
+                    
+                }
         }
         // A method to handle the riddle rooms and rewards
         public void Riddles()
@@ -292,8 +314,20 @@ namespace Project.EscapeFromOrdwood
                 String input = Console.ReadLine();
                 if (input.ToLower() == CurrentRoom.Riddle.Answer.ToLower())
                 {
+                    Console.WriteLine();
                     Console.WriteLine(CurrentRoom.Riddle.CorrectAnswerEventText);
                     isSolved = true;
+                }
+                else if (input.ToLower() == "clue")
+                {
+                    firstClue = !firstClue;
+                }
+                else
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("I am sorry but that is incorrect, please try again");
+                    Thread.Sleep(1000);
+                    Console.Clear();
                 }
             }
 
