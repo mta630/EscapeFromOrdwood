@@ -10,5 +10,6 @@ namespace EscapeFromOrdwood.Project.Interfaces
         Room RoomEvent { get; set; }
         Room RoomUnlocked { get; set; }
         string RoomEventDescription { get; set; }
+        double Damage { get; set; }
     }
 }

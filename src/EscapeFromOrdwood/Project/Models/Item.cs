@@ -10,6 +10,7 @@ namespace EscapeFromOrdwood.Project.Models
         public Room RoomEvent {get; set;}
         public Room RoomUnlocked { get; set;}
         public string RoomEventDescription {get; set;}
+        public double Damage { get; set; }
     
     public Item(string name, string description, Room roomEvent, Room roomUnlocked, string roomEventDescription)
     {
@@ -21,6 +22,13 @@ namespace EscapeFromOrdwood.Project.Models
         RoomUnlocked = roomUnlocked;
 
     }
-    
+
+    public Item(string name, string description, double damage)
+    {
+        Name = name;
+        Description = description;
+        Damage = damage;
+    }
+
     }
 }
